@@ -1,6 +1,11 @@
 -- ############## BASES DE DATOS 2023-2 ##############
--- Diseño de una base de datos
--- Carlos Iván Canto Varela 315649888
+-- Diseño de una base de datos: Concesionaria de autos
+-- 
+-- Equipo:
+-- Canto Varela, Carlos Iván
+-- Benítez Vargas, Arturo
+-- Villareal Maldonado, André
+-- García Franco, Sajid Daniel
 
 
 
@@ -169,9 +174,6 @@ CREATE TABLE automoviles(
 	FOREIGN KEY(id_modelo) REFERENCES modelos(id_modelo) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY(id_localizacion) REFERENCES localizaciones(id_localizacion) ON DELETE CASCADE ON UPDATE CASCADE
 	)ENGINE = innodb;
-
-CREATE UNIQUE INDEX index_automoviles
-ON automoviles(id_automovil, num_bastidor);
 
 INSERT INTO automoviles(num_bastidor, id_marca, id_modelo, id_localizacion, precio, descuento, potencia, cilindrada)
 	VALUES('666000000666', 1, 1, 1, 34201000, 0, 987, 16);
